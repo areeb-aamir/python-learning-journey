@@ -22,7 +22,7 @@
 # # 3. remove duplicate from lists
 
 # names = ["Areeb", "Ali", "Hassan", "Ali"]
-# print(set(list)) 
+# print(set(names))
 
 
 # # 4. Empty set
@@ -52,8 +52,8 @@
 # # part 4 - set Operations
 
 
-# group_A = {"Ali", "Areeb", "Hashir", "Hassan" } 
-# group_B = {"Fareeha", "Areeb", "Anya", "Zoya" } 
+# group_A = {"Ali", "Areeb", "Hashir", "Hassan" }
+# group_B = {"Fareeha", "Areeb", "Anya", "Zoya" }
 # common = group_A & group_B
 # print(common)
 # common_2 = group_A | group_B
@@ -77,7 +77,6 @@
 #     total = len(emails)
 #     unique = set(emails)
 #     duplicate_found = total - len(unique)
-    
 #     print(f"Total Emails : {total}")
 #     print(f"Duplicate : {duplicate_found}")
 #     print(f"Clean Emails : {len(unique)}")
@@ -212,7 +211,7 @@ students = [
     {"name": "Bilal", "marks": 30},
 ]
 
-passed = [name for name, marks in students if marks >= 90]
+passed = [name for name, marks in students if int(marks) >= 90]
 print(f"Pass students: {passed}")
 
 
