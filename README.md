@@ -33,12 +33,12 @@ This repository documents my complete Python learning path — from beginner con
 - VS Code
 
 ## Repository Structure
-'''
+```
 01-python-lectures/     → Core Python fundamentals
 02-revision-sessions/   → Hands-on projects, session by session
 03-oop-practice/        → Object-Oriented Programming
 04-modules-decorators/  → Modules, venv, and decorators
-'''
+```
 
 ## Contact
 
