@@ -1,5 +1,3 @@
-
-
 # print("===== Classic Login System =====")
 
 # def cal_sum(num1, num2, opretion = "add"):
@@ -35,12 +33,12 @@
 #         for i in range(2, num):
 #             if num % i == 0:
 #                 return "Not a prime number"
-#         return "Prime number" 
+#         return "Prime number"
 #     else:
 #         return "Invalid input"
 # check_num = int(input("Enter a number to check if it's prime or not: "))
-# print(num(check_num))           
-    
+# print(num(check_num))
+
 
 
 
@@ -137,26 +135,26 @@
 
 
 
-# part 6
+# # part 6
 
-print("=====Students Marks System=====")
-students = []
-marks = []
-
-
-for i in range(3): 
-    name = input(f"Name of Student {i+1} is: ")
-    mark = int(input(f"{name} has Marks:"))
-    students.append(name)
-    marks.append(mark)   
-print("\n==== Results ====")
-for i in range(len(students)):
-    print(f"{students[i]} : {marks[i]}")
+# print("=====Students Marks System=====")
+# students = []
+# marks = []
 
 
-print(f"\n Higgest Marks : {max(marks)}")
-print(f"Lowest Marks : {min(marks)}")
-print(f"Average : {sum(marks)/len(marks)}")
+# for i in range(3):
+#     name = input(f"Name of Student {i+1} is: ")
+#     mark = int(input(f"{name} has Marks:"))
+#     students.append(name)
+#     marks.append(mark)
+# print("\n==== Results ====")
+# for i in range(len(students)):
+#     print(f"{students[i]} : {marks[i]}")
+
+
+# print(f"\n Higgest Marks : {max(marks)}")
+# print(f"Lowest Marks : {min(marks)}")
+# print(f"Average : {sum(marks)/len(marks)}")
 
 
 
@@ -166,7 +164,7 @@ print(f"Average : {sum(marks)/len(marks)}")
 
 # print("======= Your Data =======")
 # numbers = []
-      
+
 # for i in range(5):
 #     num = int(input("Enter Number : "))
 #     numbers.append(num)
