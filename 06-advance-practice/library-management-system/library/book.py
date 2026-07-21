@@ -28,14 +28,10 @@ class Book:
         Genre : {self.genre}
         Publication Year : {self.publication_year}
         Total Copies : {self.total_copies}
-        Avialable Copies : {self.available_copies}
+        Available Copies : {self.available_copies}
         """
 
 
-
-my_book = Book("hh", "auth", "isbn", "j", 34, 7)
-a = my_book.__str__()
-print(a)
 
 
 
