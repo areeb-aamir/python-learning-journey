@@ -1,1 +1,4 @@
 01-python-lectures/early-work/
+__pycache__/
+*.pyc
+venv/
