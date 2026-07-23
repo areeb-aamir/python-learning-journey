@@ -55,7 +55,8 @@ class LibrarySystem:
     def search_book(self, title : str):
         matching_book = [book for book in self.books if title.lower()
                           in book.title.lower()]
-        print(matching_book)
+        for book in matching_book:
+            print(book)
 
 
 
