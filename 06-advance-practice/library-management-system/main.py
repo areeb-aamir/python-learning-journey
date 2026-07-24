@@ -1,24 +1,80 @@
 from library.library_system import LibrarySystem
 from library.book import Book
-from library.member import Student
+from library.member import Student, Faculty
 from datetime import date, timedelta
 
-# System banao
-system = LibrarySystem()
 
-# Book aur Member add karo
-book1 = Book("Atomic Habits", "James Clear", "12345", "Self-help", 2018, 2)
-system.add_book(book1)
+def main():
+    system = LibrarySystem()
+    system.load_data("data/library_data.json")
 
-student1 = Student("Areeb", 1)
-system.add_member(student1)
+    while True:
+        print("\n--- Library Management System ---")
+        print("1. Add Book")
+        print("2. Register Member")
+        print("3. Issue Book")
+        print("4. Return Book")
+        print("5. Search Book")
+        print("6. Exit")
 
-# Book issue karo
-due = date.today() + timedelta(days=14)
-system.issue_book(book1, student1, due)
+        try:
+            option = int(input("Choose Option: "))
+        except ValueError:
+            print("Enter a valid number!")
+            continue
 
-# Search test karo
-system.search_book("atomic")
+        if option == 1:
+            title = input("Title: ")
+            author = input("Author: ")
+            isbn = input("ISBN: ")
+            genre = input("Genre: ")
+            year = int(input("Publication Year: "))
+            copies = int(input("Total Copies: "))
+            new_book = Book(title, author, isbn, genre, year, copies)
+            system.add_book(new_book)
 
-# Book return karo
-system.return_book(book1, student1)
+        elif option == 2:
+            name = input("Name: ")
+            id = int(input("Your ID: "))
+            member_type = input("Type (student/faculty): ")
+            if member_type.lower() == "student":
+                new_member = Student(name, id)
+            else:
+                new_member = Faculty(name, id)
+            system.add_member(new_member)
+
+        elif option == 3:
+            book_name = input("Book Name: ")
+            name = input("Member Name: ")
+            due = date.today() + timedelta(days=14)
+            complete_book = system.find_book(book_name)
+            complete_member = system.find_member(name)
+            if complete_book and complete_member:
+                system.issue_book(complete_book, complete_member, due)
+            else:
+                print("Book or Member not found!")
+
+        elif option == 4:
+            book_name = input("Book Name: ")
+            name = input("Member Name: ")
+            complete_book = system.find_book(book_name)
+            complete_member = system.find_member(name)
+            if complete_book and complete_member:
+                system.return_book(complete_book, complete_member)
+            else:
+                print("Book or Member not found!")
+
+        elif option == 5:
+            title = input("Search: ")
+            system.search_book(title)
+
+        elif option == 6:
+            system.save_data("data/library_data.json")
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option!")
+
+
+if __name__ == "__main__":
+    main()

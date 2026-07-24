@@ -3,7 +3,7 @@ Member Module - represent members Data in library system
 """
 
 class Member:
-    """ Parrent Class - Gives General Info """
+    """ Parent Class - Gives General Info """
     def __init__(self, name : str, id : int,):
         self.name = name
         self.id = id
@@ -19,6 +19,15 @@ class Member:
         """
 
 
+    def to_dict(self) -> dict:
+        return {
+            "name": self.name,
+            "id": self.id,
+            "borrowed_books": self.borrowed_books,
+            "max_limit": self.max_limit
+        }
+
+
 class Student(Member):
     """Inherited Class - Gives Extra Info rather than general"""
     def __init__(self, name : str, id : int):
@@ -31,104 +40,6 @@ class Faculty(Member):
     def __init__(self, name : str, id : int,):
         super().__init__(name, id,)
         self.max_limit = 10
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

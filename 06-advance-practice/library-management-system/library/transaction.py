@@ -26,7 +26,8 @@ class Transaction:
         self.status = status
 
 
-    def __str__(self):
+    def __str__(self) -> str:
+        """Return a user-friendly string representation."""
         return f"""
         Book Name : {self.book.title}
         Member : {self.member.name}
@@ -34,3 +35,13 @@ class Transaction:
         Due Date : {self.due_date}
         Status : {self.status}
         """
+
+    def to_dict(self) -> dict:
+        """Convert transaction to a dictionary for JSON storage."""
+        return {
+            "book_title": self.book.title,
+            "member_name": self.member.name,
+            "issue_date": str(self.issue_date),
+            "due_date": str(self.due_date),
+            "status": self.status
+        }

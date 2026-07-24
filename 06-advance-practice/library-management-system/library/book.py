@@ -1,6 +1,8 @@
+
 """
 Book Module - represents a book in a library system.
 """
+
 
 
 
@@ -33,91 +35,16 @@ class Book:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def to_dict(self) -> dict:
+        """Convert book object to a dictionary for JSON storage."""
+        return {
+            "title": self.title,
+            "author": self.author,
+            "isbn": self.isbn,
+            "genre": self.genre,
+            "publication_year": self.publication_year,
+            "total_copies": self.total_copies,
+            "available_copies": self.available_copies
+        }
 
 
