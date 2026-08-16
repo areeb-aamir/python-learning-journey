@@ -1,5 +1,9 @@
 # 📚 Library Management System
 
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![OOP](https://img.shields.io/badge/OOP-Intermediate-green)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+
 A command-line library management system built with Python, demonstrating Object-Oriented Programming, file persistence, and clean software design.
 
 ## Features
@@ -21,15 +25,17 @@ A command-line library management system built with Python, demonstrating Object
 
 ## Project Structure
 
+```text
 library-management-system/
-library/
-book.py → Book class
-member.py → Member, Student, Faculty classes
-transaction.py → Transaction class + logging decorator
-library_system.py → Core system logic
-data/
-library_data.json → Persisted data
-main.py → CLI entry point
+├── library/
+│   ├── book.py          → Book class
+│   ├── member.py        → Member, Student, Faculty classes
+│   ├── transaction.py   → Transaction class + logging decorator
+│   └── library_system.py → Core system logic
+├── data/
+│   └── library_data.json → Persisted data
+└── main.py              → CLI entry point
+```
 
 ## How to Run
 
