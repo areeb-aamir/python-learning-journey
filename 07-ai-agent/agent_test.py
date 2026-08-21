@@ -1,3 +1,10 @@
+"""
+Adjusts a given time (or current time) by adding or subtracting a duration.
+Use base_time when the result of a previous time calculation needs to be
+adjusted further.
+...
+"""
+
 from dotenv import load_dotenv
 import os
 from google import genai
@@ -19,7 +26,7 @@ def sub(a: int, b: int) -> int:
     """Subtracts Two Numbers."""
     return a - b
 
-def adjust_time(hours: int, minutes: int, seconds: int, operation: str) -> str:
+def adjust_time(hours: int, minutes: int, seconds: int, operation: str, base_time : str | None = None) -> str:
     """
     Adjusts the current time by adding or subtracting a given duration.
 
@@ -31,12 +38,20 @@ def adjust_time(hours: int, minutes: int, seconds: int, operation: str) -> str:
         minutes: Number of minutes to add or subtract (use 0 if not mentioned)
         seconds: Number of seconds to add or subtract (use 0 if not mentioned)
         operation: Either 'add' to add time, or 'subtract' to subtract time
-
+        base_time: Optional. If provided, use this time (in HH:MM:SS format)
+                as the starting point instead of current time. Use this when
+                chaining multiple time operations — pass the result of the
+                previous adjust_time call here.
     Returns:
         The resulting time as a string in HH:MM:SS format
     """
-    now = datetime.now()
+
+    if base_time is not None:
+        now = datetime.strptime(base_time, "%H:%M:%S")
+    else:
+        now = datetime.now()
     adjustment = timedelta(hours=hours, minutes=minutes, seconds=seconds)
+
     if operation in ["add", "addition"]:
         result = now + adjustment
         return result.strftime("%H:%M:%S")

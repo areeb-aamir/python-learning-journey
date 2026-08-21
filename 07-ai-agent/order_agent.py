@@ -128,14 +128,23 @@ def escalate_to_human(order_id: str, reason: str) -> str:
             return f"{order_id} id might be Frustrating because {reason} | Urgency level : Low"
     return "order_not_found"
 
+
+chat = client.chats.create(
+    model="gemini-3.5-flash-lite",
+    config={
+        "tools": [check_order_status, estimate_delivery, escalate_to_human],
+        "system_instruction": "You are QuickShop AI Support Agent."
+        " You help customers with order tracking, delivery estimates, and escalations."
+        " Be professional, polite, empathetic, and concise, "
+        "Do not answer questions unrelated to QuickShop orders."
+        "Politely redirect the customer to order-related queries only."
+        " Always check order status before giving advice."
+    }
+)
 while True:
     content = input("You: ")
     if content == "quit":
         break
     else:
-        response = client.models.generate_content(
-            model="gemini-3.5-flash-lite",
-            contents=content,
-            config={"tools": [check_order_status, estimate_delivery, escalate_to_human]}
-        )
+        response = chat.send_message(content)
         print(response.text)
