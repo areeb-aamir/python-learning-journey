@@ -1,60 +1,67 @@
 # 🐍 Python Learning Journey
 
-My self-directed Python learning journey — from fundamentals to AI API integration, with 20+ hands-on projects and a live deployed AI product.
+> From zero Python to deployed AI Agents — self-directed, project-first learning.
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![AI](https://img.shields.io/badge/AI-Gemini%20API-orange)
+![Agents](https://img.shields.io/badge/AI-Agents-purple)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-## About This Repository
+---
 
-This repository documents my complete Python learning path — from beginner concepts to Object-Oriented Programming, API integration, and building & deploying real AI-powered tools.
+## 🚀 What's Been Built
 
-## What I've Learned
+| Project | Tech | Status |
+|---------|------|--------|
+| [QuickShop AI Order Support Agent](https://python-learning-journey-ai-agent.streamlit.app) | Gemini API + Streamlit + Function Calling | 🟢 Live |
+| [QuickShop Support Chatbot](https://quickshop-support.streamlit.app) | Gemini API + Streamlit | 🟢 Live |
+| [Library Management System](https://github.com/areeb-aamir/library-management-system) | Pure Python + OOP + JSON | ✅ Complete |
+| [Business Manager CLI](https://github.com/areeb-aamir/python-learning-journey/tree/main/02-revision-sessions/session-5-final-boss) | Python + JSON persistence | ✅ Complete |
+| [Student Database](https://github.com/areeb-aamir/python-learning-journey/blob/main/02-revision-sessions/session-3-student-database.py) | Python + JSON CRUD | ✅ Complete |
+| [Inventory System](https://github.com/areeb-aamir/python-learning-journey/blob/main/02-revision-sessions/session-2-inventory-system.py) | Python + alerts | ✅ Complete |
 
-- **Core Python** — Variables, loops, conditionals, functions
-- **Data Structures** — Lists, dictionaries, sets, tuples
-- **Comprehensions** — List, dict, and set comprehensions
-- **File Handling** — Reading/writing files, JSON persistence
-- **Error Handling** — try/except, custom error handling
-- **Object-Oriented Programming** — Classes, inheritance, encapsulation, polymorphism, dunder methods
-- **Modules & Virtual Environments** — Code organization, dependency management
-- **Decorators & Closures** — Advanced function patterns
-- **APIs & AI Integration** — REST APIs, chaining APIs, Google Gemini AI
+---
 
-## Featured Projects
+## 🧠 Skills Covered
 
-| Project | Description |
-|---------|-------------|
-| [QuickShop AI Support Bot](https://quickshop-support.streamlit.app) | 🤖 AI-powered customer support chatbot — Gemini API + Streamlit, **live deployed** |
-| [Library Management System](https://github.com/areeb-aamir/library-management-system) | Full OOP system with inheritance, JSON persistence, and custom logging decorator |
-| [Business Manager CLI](https://github.com/areeb-aamir/python-learning-journey/tree/main/02-revision-sessions/session-5-final-boss) | Complete inventory + sales management system with JSON persistence |
-| [Student Database](https://github.com/areeb-aamir/python-learning-journey/blob/main/02-revision-sessions/session-3-student-database.py) | JSON-based CRUD system for student records |
-| [Inventory System](https://github.com/areeb-aamir/python-learning-journey/blob/main/02-revision-sessions/session-2-inventory-system.py) | Stock management with low-stock alerts |
-| [Sales Report Generator](https://github.com/areeb-aamir/python-learning-journey/blob/main/02-revision-sessions/session-4-sales-report.py) | Data analysis using comprehensions |
+**Core Python**
+Variables, loops, functions, data structures, comprehensions, file I/O, error handling, JSON persistence
 
-## Tech Stack
+**Object-Oriented Programming**
+Classes, inheritance, encapsulation, polymorphism, dunder methods, decorators, closures
 
-- Python 3.13
-- Google Gemini API
-- Streamlit
-- Git & GitHub
-- VS Code
+**APIs & Integration**
+REST APIs, API chaining, Google Gemini AI, environment management
 
-## Repository Structure
+**AI Agents**
+Function calling, multi-step reasoning, conversation memory, system prompts, tool design
+
+---
+
+## 📁 Repository Structure
 
 ```text
 01-python-lectures/     → Core Python fundamentals
 02-revision-sessions/   → Hands-on projects, session by session
 03-oop-practice/        → Object-Oriented Programming
 04-modules-decorators/  → Modules, venv, and decorators
-06-advance-practice/    → APIs, AI integration, and deployed tools
+06-advance-practice/    → APIs, AI integration, deployed chatbot
+07-ai-agent/            → AI Agents — function calling, memory, Streamlit UI
 ```
 
-## Contact
+---
+
+## ⚙️ Tech Stack
+
+- Python 3.13
+- Google Gemini API (`google-genai`)
+- Streamlit
+- Git & GitHub
+- VS Code
+
+---
+
+## 📬 Contact
 
 - GitHub: [@areeb-aamir](https://github.com/areeb-aamir)
 - LinkedIn: [Areeb Aamir](https://linkedin.com/in/areeb-aamir-dev)
-
----
-*Currently building: AI Agents & Automation systems.*
